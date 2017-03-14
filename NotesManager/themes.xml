@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <theme name="Семья" category="Личные" />
+  <theme name="Отпуск" category="Личные" />
+  <theme name="Ремонт" category="Личные" />
+  <theme name="Отчет" category="Работа" />
+  <theme name="Проект" category="Работа" />
+  <theme name="Аттестация" category="Работа" />
+  <theme name="Рыбалка" category="Хобби" />
+  <theme name="Охота" category="Хобби" />
+  <theme name="Рок" category="Хобби" />
+</root>
