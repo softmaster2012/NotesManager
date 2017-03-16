@@ -78,5 +78,96 @@ namespace NotesManager
             string path = res.First().Attribute("path").Value;
             richTextBox1.LoadFile(path);
         }
+
+        private void addCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
+        }
+
+        private void addThemeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FontX_Click(object sender, EventArgs e)
+        {
+            FontDialog fd = new FontDialog();
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.Font = fd.Font;
+            }
+        }
+
+        private void Color_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.ForeColor = cd.Color;
+            }
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Undo();
+        }
+
+        private void Cut_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Cut();
+        }
+
+        private void Copy_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Copy();
+        }
+
+        private void Paste_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Paste();
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            if (richTextBox1.SelectedText != "")
+                richTextBox1.SelectedText = "";
+            else
+            {
+                // ... отложено - определение позиции курса
+            }
+        }
+
+        private void Find_Click(object sender, EventArgs e)
+        {
+            // - простой вариант:
+            // модальное окно для олпределения искомого текста
+
+            FindDialog fd = new FindDialog();
+            List<string> list1 = new List<string>();
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                int k = richTextBox1.Find(fd.SearchText);
+                richTextBox1.Find(fd.SearchText);
+                string textX = richTextBox1.SelectedText;
+                richTextBox1.SelectionColor = Color.Red;
+                //MessageBox.Show();
+            }
+
+            // - продвинутый вариант:
+            // немодальное окно с мносерийным поиском при 
+            // редактировании искомого текста
+        }
     }
 }

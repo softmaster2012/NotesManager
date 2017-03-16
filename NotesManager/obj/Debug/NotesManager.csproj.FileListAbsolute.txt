@@ -34,3 +34,4 @@ D:\NewPC\notesmanager\NotesManager\obj\Debug\NotesManager.Form3.resources
 D:\NewPC\notesmanager\NotesManager\obj\Debug\NotesManager.Form4.resources
 D:\NewPC\notesmanager\NotesManager\obj\Debug\NotesManager.Properties.Resources.resources
 D:\NewPC\notesmanager\NotesManager\obj\Debug\NotesManager.csproj.GenerateResource.Cache
+D:\NewPC\notesmanager\NotesManager\obj\Debug\NotesManager.FindDialog.resources
